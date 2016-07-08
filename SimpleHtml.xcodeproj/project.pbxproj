@@ -13,7 +13,12 @@
 		7C1551DD1D2FCDFE002BD136 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7C1551DB1D2FCDFE002BD136 /* Main.storyboard */; };
 		7C1551DF1D2FCDFE002BD136 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7C1551DE1D2FCDFE002BD136 /* Assets.xcassets */; };
 		7C1551E21D2FCDFE002BD136 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7C1551E01D2FCDFE002BD136 /* LaunchScreen.storyboard */; };
-		7C1551ED1D2FCDFE002BD136 /* SimpleHtmlTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 7C1551EC1D2FCDFE002BD136 /* SimpleHtmlTests.m */; };
+		7C1551FA1D2FCE4D002BD136 /* OSSimpleHTML.m in Sources */ = {isa = PBXBuildFile; fileRef = 7C1551F91D2FCE4D002BD136 /* OSSimpleHTML.m */; };
+		7C1551FC1D2FD0ED002BD136 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7C1551FB1D2FD0ED002BD136 /* Foundation.framework */; };
+		7C1551FE1D2FD13C002BD136 /* OSSimpleHTMLTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 7C1551FD1D2FD13C002BD136 /* OSSimpleHTMLTests.m */; };
+		7C51A9691D300ADA005C4CE7 /* OSSimpleHTMLStyleAncor.m in Sources */ = {isa = PBXBuildFile; fileRef = 7C51A9681D300ADA005C4CE7 /* OSSimpleHTMLStyleAncor.m */; };
+		7CDF3B9B1D2FE55100804887 /* OSSimpleHTMLStyle.m in Sources */ = {isa = PBXBuildFile; fileRef = 7CDF3B9A1D2FE55100804887 /* OSSimpleHTMLStyle.m */; };
+		7CDF3B9E1D2FF09100804887 /* OSSimpleHTMLStyleCollection.m in Sources */ = {isa = PBXBuildFile; fileRef = 7CDF3B9D1D2FF09100804887 /* OSSimpleHTMLStyleCollection.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -38,8 +43,17 @@
 		7C1551E11D2FCDFE002BD136 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		7C1551E31D2FCDFE002BD136 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		7C1551E81D2FCDFE002BD136 /* SimpleHtmlTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SimpleHtmlTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		7C1551EC1D2FCDFE002BD136 /* SimpleHtmlTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SimpleHtmlTests.m; sourceTree = "<group>"; };
 		7C1551EE1D2FCDFE002BD136 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		7C1551F81D2FCE4D002BD136 /* OSSimpleHTML.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = OSSimpleHTML.h; path = HtmlParser/OSSimpleHTML.h; sourceTree = "<group>"; };
+		7C1551F91D2FCE4D002BD136 /* OSSimpleHTML.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = OSSimpleHTML.m; path = HtmlParser/OSSimpleHTML.m; sourceTree = "<group>"; };
+		7C1551FB1D2FD0ED002BD136 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		7C1551FD1D2FD13C002BD136 /* OSSimpleHTMLTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OSSimpleHTMLTests.m; sourceTree = "<group>"; };
+		7C51A9671D300ADA005C4CE7 /* OSSimpleHTMLStyleAncor.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = OSSimpleHTMLStyleAncor.h; path = HtmlParser/OSSimpleHTMLStyleAncor.h; sourceTree = "<group>"; };
+		7C51A9681D300ADA005C4CE7 /* OSSimpleHTMLStyleAncor.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = OSSimpleHTMLStyleAncor.m; path = HtmlParser/OSSimpleHTMLStyleAncor.m; sourceTree = "<group>"; };
+		7CDF3B991D2FE55100804887 /* OSSimpleHTMLStyle.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = OSSimpleHTMLStyle.h; path = HtmlParser/OSSimpleHTMLStyle.h; sourceTree = "<group>"; };
+		7CDF3B9A1D2FE55100804887 /* OSSimpleHTMLStyle.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = OSSimpleHTMLStyle.m; path = HtmlParser/OSSimpleHTMLStyle.m; sourceTree = "<group>"; };
+		7CDF3B9C1D2FF09100804887 /* OSSimpleHTMLStyleCollection.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = OSSimpleHTMLStyleCollection.h; path = HtmlParser/OSSimpleHTMLStyleCollection.h; sourceTree = "<group>"; };
+		7CDF3B9D1D2FF09100804887 /* OSSimpleHTMLStyleCollection.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = OSSimpleHTMLStyleCollection.m; path = HtmlParser/OSSimpleHTMLStyleCollection.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -47,6 +61,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7C1551FC1D2FD0ED002BD136 /* Foundation.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -63,6 +78,7 @@
 		7C1551C61D2FCDFE002BD136 = {
 			isa = PBXGroup;
 			children = (
+				7C1551FB1D2FD0ED002BD136 /* Foundation.framework */,
 				7C1551D11D2FCDFE002BD136 /* SimpleHtml */,
 				7C1551EB1D2FCDFE002BD136 /* SimpleHtmlTests */,
 				7C1551D01D2FCDFE002BD136 /* Products */,
@@ -81,6 +97,7 @@
 		7C1551D11D2FCDFE002BD136 /* SimpleHtml */ = {
 			isa = PBXGroup;
 			children = (
+				7C1551F71D2FCE18002BD136 /* HtmlParser */,
 				7C1551D51D2FCDFE002BD136 /* AppDelegate.h */,
 				7C1551D61D2FCDFE002BD136 /* AppDelegate.m */,
 				7C1551D81D2FCDFE002BD136 /* ViewController.h */,
@@ -105,10 +122,25 @@
 		7C1551EB1D2FCDFE002BD136 /* SimpleHtmlTests */ = {
 			isa = PBXGroup;
 			children = (
-				7C1551EC1D2FCDFE002BD136 /* SimpleHtmlTests.m */,
 				7C1551EE1D2FCDFE002BD136 /* Info.plist */,
+				7C1551FD1D2FD13C002BD136 /* OSSimpleHTMLTests.m */,
 			);
 			path = SimpleHtmlTests;
+			sourceTree = "<group>";
+		};
+		7C1551F71D2FCE18002BD136 /* HtmlParser */ = {
+			isa = PBXGroup;
+			children = (
+				7C1551F81D2FCE4D002BD136 /* OSSimpleHTML.h */,
+				7C1551F91D2FCE4D002BD136 /* OSSimpleHTML.m */,
+				7CDF3B991D2FE55100804887 /* OSSimpleHTMLStyle.h */,
+				7CDF3B9A1D2FE55100804887 /* OSSimpleHTMLStyle.m */,
+				7C51A9671D300ADA005C4CE7 /* OSSimpleHTMLStyleAncor.h */,
+				7C51A9681D300ADA005C4CE7 /* OSSimpleHTMLStyleAncor.m */,
+				7CDF3B9C1D2FF09100804887 /* OSSimpleHTMLStyleCollection.h */,
+				7CDF3B9D1D2FF09100804887 /* OSSimpleHTMLStyleCollection.m */,
+			);
+			name = HtmlParser;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -211,8 +243,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7CDF3B9B1D2FE55100804887 /* OSSimpleHTMLStyle.m in Sources */,
 				7C1551DA1D2FCDFE002BD136 /* ViewController.m in Sources */,
 				7C1551D71D2FCDFE002BD136 /* AppDelegate.m in Sources */,
+				7C1551FA1D2FCE4D002BD136 /* OSSimpleHTML.m in Sources */,
+				7CDF3B9E1D2FF09100804887 /* OSSimpleHTMLStyleCollection.m in Sources */,
+				7C51A9691D300ADA005C4CE7 /* OSSimpleHTMLStyleAncor.m in Sources */,
 				7C1551D41D2FCDFE002BD136 /* main.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -221,7 +257,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				7C1551ED1D2FCDFE002BD136 /* SimpleHtmlTests.m in Sources */,
+				7C1551FE1D2FD13C002BD136 /* OSSimpleHTMLTests.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -404,6 +440,7 @@
 				7C1551F31D2FCDFE002BD136 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		7C1551F41D2FCDFE002BD136 /* Build configuration list for PBXNativeTarget "SimpleHtmlTests" */ = {
 			isa = XCConfigurationList;
@@ -412,6 +449,7 @@
 				7C1551F61D2FCDFE002BD136 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

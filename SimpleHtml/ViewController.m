@@ -7,9 +7,11 @@
 //
 
 #import "ViewController.h"
+#import "OSSimpleHTML.h"
 
-@interface ViewController ()
-
+@interface ViewController () <UITextViewDelegate>
+@property (nonatomic) IBOutlet UILabel *label;
+@property (nonatomic) IBOutlet UITextView *textView;
 @end
 
 @implementation ViewController
@@ -17,11 +19,23 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view, typically from a nib.
+    [self toHtml:nil];
 }
 
-- (void)didReceiveMemoryWarning {
-    [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
+- (IBAction)toHtml:(UIButton *)sender
+{
+    OSSimpleHTML *htmlParser = [[OSSimpleHTML alloc] initWithBasicTextAttributes:@{}];
+
+    NSAttributedString *labelText = [htmlParser attributedStringFromHTML:self.textView.text];
+
+    if (!labelText) {
+        labelText = [[NSAttributedString alloc] initWithString:@"[parse error]" attributes:@{NSForegroundColorAttributeName:[UIColor redColor]}];
+    }
+
+    self.label.attributedText = labelText;
+
+    [self.textView resignFirstResponder];
 }
+
 
 @end
