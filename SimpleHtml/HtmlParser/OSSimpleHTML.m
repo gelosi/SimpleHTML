@@ -17,14 +17,6 @@
 @property (nonatomic) id output;
 @property (nonatomic) BOOL isAttributedOutput;
 
-
-
-//@property (nonatomic) NSDictionary *boldAttributes;
-//@property (nonatomic) NSDictionary *italicAttributes;
-//@property (nonatomic) NSDictionary *linkAttributes;
-
-//@property (nonatomic) NSDictionary *styleMap;
-
 @end
 
 @implementation OSSimpleHTML
@@ -120,6 +112,7 @@
             font = [UIFont fontWithDescriptor:newFont size:font.pointSize];
             NSMutableDictionary *newAttributes = [NSMutableDictionary dictionaryWithDictionary:computedStyle.attributes];
             newAttributes[NSFontAttributeName] = font;
+            [newAttributes removeObjectForKey:UIFontSymbolicTrait];
             NSString* styleTag = [NSString stringWithFormat:@"%@(:traits)", computedStyle.tag];
             computedStyle = [OSSimpleHTMLStyle styleWithTag:styleTag attributes:newAttributes];
         }
