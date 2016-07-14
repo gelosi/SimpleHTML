@@ -15,10 +15,13 @@ NS_ASSUME_NONNULL_BEGIN
 
 @interface OSSimpleHTML : NSObject
 
-@property (nonatomic, readonly) NSDictionary<NSString *, NSString *> *basicTextAttributes;
+@property (nonatomic, readonly) OSSimpleHTMLStyle *basicStyle;
+@property (nonatomic, readonly) OSSimpleHTMLStyle *unsupportedStyle;
+
 @property (nonatomic, readonly) NSMutableDictionary<NSString *, OSSimpleHTMLStyle *> *styles;
 
 - (instancetype)initWithBasicTextAttributes:(NSDictionary<NSString *, NSString *> *)basicTextAttributes;
+- (instancetype)initWithBasicStyle:(OSSimpleHTMLStyle *)basicStyle NS_DESIGNATED_INITIALIZER;
 
 - (NSString *)stringFromHTML:(NSString *)html;
 - (NSAttributedString *)attributedStringFromHTML:(NSString *)html;

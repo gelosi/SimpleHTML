@@ -10,7 +10,7 @@
 #import "OSSimpleHTML.h"
 
 @interface ViewController () <UITextViewDelegate>
-@property (nonatomic) IBOutlet UILabel *label;
+@property (nonatomic) IBOutlet UITextView *textPreview;
 @property (nonatomic) IBOutlet UITextView *textView;
 @end
 
@@ -32,7 +32,7 @@
         labelText = [[NSAttributedString alloc] initWithString:@"[parse error]" attributes:@{NSForegroundColorAttributeName:[UIColor redColor]}];
     }
 
-    self.label.attributedText = labelText;
+    self.textPreview.attributedText = labelText;
 
     [self.textView resignFirstResponder];
 }

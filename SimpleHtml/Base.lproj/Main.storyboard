@@ -19,12 +19,6 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="pEB-Cq-g3Z">
-                                <rect key="frame" x="20" y="340" width="560" height="240"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" text="&lt;b&gt;Test&lt;/b&gt;" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="GM5-eX-iyC">
                                 <rect key="frame" x="20" y="20" width="560" height="240"/>
                                 <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
@@ -41,23 +35,30 @@
                                     <action selector="toHtml:" destination="BYZ-38-t0r" eventType="touchUpInside" id="LPQ-OX-9HY"/>
                                 </connections>
                             </button>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="WgV-hW-2Cb">
+                                <rect key="frame" x="20" y="323" width="560" height="257"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                                <dataDetectorType key="dataDetectorTypes" phoneNumber="YES" link="YES" address="YES" calendarEvent="YES"/>
+                            </textView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="WgV-hW-2Cb" secondAttribute="bottom" constant="20" id="1gD-xb-b2a"/>
                             <constraint firstItem="ibb-gI-kux" firstAttribute="top" secondItem="GM5-eX-iyC" secondAttribute="bottom" constant="25" id="5x2-ig-i0b"/>
-                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="pEB-Cq-g3Z" secondAttribute="bottom" constant="20" id="8l5-Yy-tD7"/>
                             <constraint firstItem="GM5-eX-iyC" firstAttribute="trailing" secondItem="8bC-Xf-vdC" secondAttribute="trailingMargin" id="9vx-fV-ow1"/>
-                            <constraint firstItem="pEB-Cq-g3Z" firstAttribute="trailing" secondItem="8bC-Xf-vdC" secondAttribute="trailingMargin" id="Q4s-Kx-3Yn"/>
+                            <constraint firstItem="WgV-hW-2Cb" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" constant="20" id="NgX-aL-Q9g"/>
                             <constraint firstItem="GM5-eX-iyC" firstAttribute="height" secondItem="8bC-Xf-vdC" secondAttribute="height" multiplier="0.4" id="RbJ-lQ-k6y"/>
                             <constraint firstItem="GM5-eX-iyC" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" id="SNd-Ul-3bI"/>
+                            <constraint firstAttribute="trailing" secondItem="WgV-hW-2Cb" secondAttribute="trailing" constant="20" id="Spf-Sa-uCW"/>
                             <constraint firstItem="GM5-eX-iyC" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="VuB-S0-dwl"/>
-                            <constraint firstItem="pEB-Cq-g3Z" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="Vzv-Cg-yIT"/>
                             <constraint firstItem="ibb-gI-kux" firstAttribute="centerX" secondItem="GM5-eX-iyC" secondAttribute="centerX" id="eCf-bZ-EOZ"/>
-                            <constraint firstItem="pEB-Cq-g3Z" firstAttribute="height" secondItem="GM5-eX-iyC" secondAttribute="height" id="rzS-ww-4cj"/>
+                            <constraint firstItem="WgV-hW-2Cb" firstAttribute="top" secondItem="ibb-gI-kux" secondAttribute="bottom" constant="8" id="hg8-6N-qwa"/>
                         </constraints>
                     </view>
                     <connections>
-                        <outlet property="label" destination="pEB-Cq-g3Z" id="Iev-eb-NbA"/>
+                        <outlet property="textPreview" destination="WgV-hW-2Cb" id="RZb-lR-l0R"/>
                         <outlet property="textView" destination="GM5-eX-iyC" id="k1e-Xg-7o7"/>
                     </connections>
                 </viewController>
