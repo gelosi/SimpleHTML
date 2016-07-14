@@ -117,5 +117,16 @@
     XCTAssertTrue(font.fontDescriptor.symbolicTraits & UIFontDescriptorTraitItalic);
 }
 
+- (void)testPerfomanceAttributedString
+{
+    NSString *html = @"<b>Test</b> +49157519<b>4</b>95 <i>slide</i> <i><a href=\"http://obrij.com\"> click <b>to</b> visit <b>obrij</b>.com</a></i><b>booooooool</b>";
+
+    OSSimpleHTML *htmlParser = [[OSSimpleHTML alloc] initWithBasicTextAttributes:@{}];
+
+    [self measureBlock:^{
+        [htmlParser attributedStringFromHTML:html];
+    }];
+}
+
 
 @end

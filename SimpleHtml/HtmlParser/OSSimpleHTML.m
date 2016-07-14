@@ -136,8 +136,6 @@
         NSAttributedString *chunk = [[NSAttributedString alloc] initWithString:string
                                                                     attributes:computedStyle.attributes];
 
-        NSLog(@"ComputedStyle: %@ for text: '%@'", computedStyle.tag, string);
-
         [self.output appendString:chunk];
     } else {
         [self.output appendString:string];
