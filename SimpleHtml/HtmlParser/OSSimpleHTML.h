@@ -20,6 +20,9 @@ NS_ASSUME_NONNULL_BEGIN
 
 @property (nonatomic, readonly) NSMutableDictionary<NSString *, OSSimpleHTMLStyle *> *styles;
 
+- (instancetype)init NS_UNAVAILABLE;
++ (instancetype)new NS_UNAVAILABLE;
+
 - (instancetype)initWithBasicTextAttributes:(NSDictionary<NSString *, NSString *> *)basicTextAttributes;
 - (instancetype)initWithBasicStyle:(OSSimpleHTMLStyle *)basicStyle NS_DESIGNATED_INITIALIZER;
 
