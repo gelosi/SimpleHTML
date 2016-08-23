@@ -144,34 +144,36 @@
 {
     NSString *html = @"<b>Test</b> +49157519<b>4</b>95 <i>slide</i> <i><a href=\"http://obrij.com\"> click <b>to</b> visit <b>obrij</b>.com</a></i><b>booooooool</b>";
 
+    NSString *head = @"<!DOCTYPE html>"
+    "<style type=\"text/css\">"
+    "body{"
+    "   font-family: HelveticaNeue, Helvetica;"
+    "   font-size: 15pt;"
+    "   color:#000;"
+    "   background:#fff;"
+    "   "
+    "}"
+    "a {"
+    "   color: #aaa"
+    "   text-decoration: underline;"
+    "}"
+    "</style>"
+
+    "<html>"
+    "<head>"
+    "<meta http-equiv=\"Content-Type\" content=\"text/html; charset=utf-8\" />"
+    "<meta name=\"viewport\" content=\"width=device-width, initial-scale=1, maximum-scale=1\" />"
+    "</head>"
+    "<body>";
+
+    NSArray *components = @[head,
+                            html,
+                            @"</body></html>"];
+
+    NSString *stringWithHtmlHead = [components componentsJoinedByString:@""];
+
     [self measureBlock:^{
-        NSString *head = @"<!DOCTYPE html>"
-        "<style type=\"text/css\">"
-        "body{"
-        "   font-family: HelveticaNeue, Helvetica;"
-        "   font-size: 15pt;"
-        "   color:#000;"
-        "   background:#fff;"
-        "   "
-        "}"
-        "a {"
-        "   color: #aaa"
-        "   text-decoration: underline;"
-        "}"
-        "</style>"
 
-        "<html>"
-        "<head>"
-        "<meta http-equiv=\"Content-Type\" content=\"text/html; charset=utf-8\" />"
-        "<meta name=\"viewport\" content=\"width=device-width, initial-scale=1, maximum-scale=1\" />"
-        "</head>"
-        "<body>";
-
-        NSArray *components = @[head,
-                                html,
-                                @"</body></html>"];
-
-        NSString *stringWithHtmlHead = [components componentsJoinedByString:@""];
         NSError *error;
 
         id str = [[NSAttributedString alloc] initWithData: [stringWithHtmlHead dataUsingEncoding: NSUTF8StringEncoding]
