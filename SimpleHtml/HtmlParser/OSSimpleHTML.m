@@ -79,10 +79,12 @@
 {
     NSParameterAssert(string != nil);
 
+    NSString *guardString = [self guardString:string];
+
     NSArray *components = @[
                             @"<?xml version=\"1.0\" encoding=\"UTF-8\"?>",
                             @"<", self.basicStyle.tag, @">",
-                            string,
+                            guardString,
                             @"</", self.basicStyle.tag, @">"
                             ];
 
@@ -92,6 +94,17 @@
     NSXMLParser *parser = [[NSXMLParser alloc] initWithData:data];
     parser.delegate = self;
     return parser;
+}
+
+- (NSString *)guardString:(NSString *)string
+{
+    NSStringCompareOptions options = NSCaseInsensitiveSearch | NSLiteralSearch;
+    
+    string = [string stringByReplacingOccurrencesOfString:@"&amp;" withString:@"&" options:options range:NSMakeRange(0, string.length)];
+    string = [string stringByReplacingOccurrencesOfString:@"&nbsp;" withString:@" " options:options range:NSMakeRange(0, string.length)];
+    string = [string stringByReplacingOccurrencesOfString:@"<br>" withString:@"<br/>" options:options range:NSMakeRange(0, string.length)];
+
+    return string;
 }
 
 - (OSSimpleHTMLStyle *)computeStyleStack:(NSArray *)styleStack
