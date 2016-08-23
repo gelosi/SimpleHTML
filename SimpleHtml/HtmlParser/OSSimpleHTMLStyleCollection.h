@@ -8,6 +8,7 @@
 
 #import "OSSimpleHTMLStyle.h"
 #import "OSSimpleHTMLStyleAncor.h"
+#import "OSSimpleHTMLStyleLineBreak.h"
 
 @interface OSSimpleHTMLStyleCollection : NSObject
 + (NSArray<OSSimpleHTMLStyle *> *)styles;

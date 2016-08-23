@@ -18,6 +18,7 @@
              [OSSimpleHTMLStyle styleWithTag:@"i" attributes:@{UIFontSymbolicTrait:@(UIFontDescriptorTraitItalic)}],
              [OSSimpleHTMLStyle styleWithTag:@"u" attributes:@{NSUnderlineStyleAttributeName:@(NSUnderlineStyleSingle)}],
              [OSSimpleHTMLStyleAncor styleWithTag:@"a" attributes:@{NSUnderlineStyleAttributeName:@(NSUnderlineStyleSingle)}],
+             [OSSimpleHTMLStyleLineBreak style],
              ];
 }
 @end

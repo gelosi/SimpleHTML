@@ -27,6 +27,17 @@
     XCTAssertEqualObjects(res, html);
 }
 
+- (void)testLineBreak
+{
+    NSString *html = @"Test<br>Best";
+
+    OSSimpleHTML *htmlParser = [[OSSimpleHTML alloc] initWithBasicTextAttributes:@{}];
+
+    NSString *res = [htmlParser stringFromHTML:html];
+
+    XCTAssertEqualObjects(res, @"Test\nBest");
+}
+
 - (void)testBoldStringParsing
 {
     NSString *html = @"<b>Test</b>";

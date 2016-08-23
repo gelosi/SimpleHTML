@@ -18,6 +18,7 @@
 		7C1551FE1D2FD13C002BD136 /* OSSimpleHTMLTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 7C1551FD1D2FD13C002BD136 /* OSSimpleHTMLTests.m */; };
 		7C51A9691D300ADA005C4CE7 /* OSSimpleHTMLStyleAncor.m in Sources */ = {isa = PBXBuildFile; fileRef = 7C51A9681D300ADA005C4CE7 /* OSSimpleHTMLStyleAncor.m */; };
 		7C97E99C1D37A3FF005F6A18 /* OSSimpleHtmlOutput.m in Sources */ = {isa = PBXBuildFile; fileRef = 7C97E99B1D37A3FF005F6A18 /* OSSimpleHtmlOutput.m */; };
+		7CD7310C1D6CAD1D004227FC /* OSSimpleHTMLStyleLineBreak.m in Sources */ = {isa = PBXBuildFile; fileRef = 7CD7310B1D6CAD1D004227FC /* OSSimpleHTMLStyleLineBreak.m */; };
 		7CDF3B9B1D2FE55100804887 /* OSSimpleHTMLStyle.m in Sources */ = {isa = PBXBuildFile; fileRef = 7CDF3B9A1D2FE55100804887 /* OSSimpleHTMLStyle.m */; };
 		7CDF3B9E1D2FF09100804887 /* OSSimpleHTMLStyleCollection.m in Sources */ = {isa = PBXBuildFile; fileRef = 7CDF3B9D1D2FF09100804887 /* OSSimpleHTMLStyleCollection.m */; };
 /* End PBXBuildFile section */
@@ -53,6 +54,8 @@
 		7C51A9681D300ADA005C4CE7 /* OSSimpleHTMLStyleAncor.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = OSSimpleHTMLStyleAncor.m; path = HtmlParser/OSSimpleHTMLStyleAncor.m; sourceTree = "<group>"; };
 		7C97E99A1D37A3FF005F6A18 /* OSSimpleHtmlOutput.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = OSSimpleHtmlOutput.h; path = HtmlParser/OSSimpleHtmlOutput.h; sourceTree = "<group>"; };
 		7C97E99B1D37A3FF005F6A18 /* OSSimpleHtmlOutput.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = OSSimpleHtmlOutput.m; path = HtmlParser/OSSimpleHtmlOutput.m; sourceTree = "<group>"; };
+		7CD7310A1D6CAD1D004227FC /* OSSimpleHTMLStyleLineBreak.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = OSSimpleHTMLStyleLineBreak.h; path = HtmlParser/OSSimpleHTMLStyleLineBreak.h; sourceTree = "<group>"; };
+		7CD7310B1D6CAD1D004227FC /* OSSimpleHTMLStyleLineBreak.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = OSSimpleHTMLStyleLineBreak.m; path = HtmlParser/OSSimpleHTMLStyleLineBreak.m; sourceTree = "<group>"; };
 		7CDF3B991D2FE55100804887 /* OSSimpleHTMLStyle.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = OSSimpleHTMLStyle.h; path = HtmlParser/OSSimpleHTMLStyle.h; sourceTree = "<group>"; };
 		7CDF3B9A1D2FE55100804887 /* OSSimpleHTMLStyle.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = OSSimpleHTMLStyle.m; path = HtmlParser/OSSimpleHTMLStyle.m; sourceTree = "<group>"; };
 		7CDF3B9C1D2FF09100804887 /* OSSimpleHTMLStyleCollection.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = OSSimpleHTMLStyleCollection.h; path = HtmlParser/OSSimpleHTMLStyleCollection.h; sourceTree = "<group>"; };
@@ -142,6 +145,8 @@
 				7CDF3B9A1D2FE55100804887 /* OSSimpleHTMLStyle.m */,
 				7C51A9671D300ADA005C4CE7 /* OSSimpleHTMLStyleAncor.h */,
 				7C51A9681D300ADA005C4CE7 /* OSSimpleHTMLStyleAncor.m */,
+				7CD7310A1D6CAD1D004227FC /* OSSimpleHTMLStyleLineBreak.h */,
+				7CD7310B1D6CAD1D004227FC /* OSSimpleHTMLStyleLineBreak.m */,
 				7CDF3B9C1D2FF09100804887 /* OSSimpleHTMLStyleCollection.h */,
 				7CDF3B9D1D2FF09100804887 /* OSSimpleHTMLStyleCollection.m */,
 			);
@@ -255,6 +260,7 @@
 				7C1551FA1D2FCE4D002BD136 /* OSSimpleHTML.m in Sources */,
 				7CDF3B9E1D2FF09100804887 /* OSSimpleHTMLStyleCollection.m in Sources */,
 				7C51A9691D300ADA005C4CE7 /* OSSimpleHTMLStyleAncor.m in Sources */,
+				7CD7310C1D6CAD1D004227FC /* OSSimpleHTMLStyleLineBreak.m in Sources */,
 				7C1551D41D2FCDFE002BD136 /* main.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
