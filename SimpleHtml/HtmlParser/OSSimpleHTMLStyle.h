@@ -16,6 +16,9 @@ NS_ASSUME_NONNULL_BEGIN
 @property (nonatomic, readonly) NSString *tag;
 @property (nonatomic, readonly) NSDictionary<NSString *, NSString *> *attributes;
 
+@property (nonatomic) NSString *prefixString;
+@property (nonatomic) NSString *suffixString;
+
 + (instancetype) styleWithTag:(NSString *)tag attributes:(NSDictionary<NSString *, NSString *> *)attributes;
 
 - (instancetype) init NS_UNAVAILABLE;
