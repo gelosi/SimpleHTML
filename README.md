@@ -8,7 +8,7 @@ I want to parse a lot of small html-like chunks to a `NSAttributedString` in bac
 
 But **I hate to do it with build-in main-thread-only parser from UIKit**:
 
-```
+```objective-c
     [[NSAttributedString alloc] initWithData:[html dataUsingEncoding: NSUTF8StringEncoding]
                                      options:@{NSDocumentTypeDocumentAttribute: NSHTMLTextDocumentType,
                                                NSCharacterEncodingDocumentAttribute:@(NSUTF8StringEncoding),
@@ -43,14 +43,14 @@ Well, not much, as it is designed to be small, fast, one thing
 
 ## How does it look like to parse?
 
-```
+```objective-c
     OSSimpleHTML *htmlParser = [[OSSimpleHTML alloc] initWithBasicTextAttributes:@{}];
     NSAttributedString *labelText = [htmlParser attributedStringFromHTML:@"<b>Bold:</b> important <i>italic</i> message"];
 ```
 
 ## I want to make my text red color xxx font by default:
 
-```
+```objective-c
 UIFontDescriptor *descriptor = [UIFontDescriptor preferredFontDescriptorWithTextStyle:UIFontTextStyleHeadline];
 UIFont *font = [UIFont fontWithDescriptor:descriptor size:descriptor.pointSize];
 
