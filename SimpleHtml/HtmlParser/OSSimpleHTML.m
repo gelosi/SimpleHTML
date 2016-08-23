@@ -177,14 +177,24 @@
     if (style) {
         OSSimpleHTMLStyle *dynamicStyle = [style styleByApplyingHTMLAttributes:attributeDict];
         [self.styleStack addObject:dynamicStyle];
+
+        if (style.prefixString) {
+            [self appendOutputString:style.prefixString withStyleStack:self.styleStack];
+        }
+
     } else {
         [self.styleStack addObject:self.unsupportedStyle];
     }
-
 }
 
 - (void)parser:(NSXMLParser *)parser didEndElement:(NSString *)elementName namespaceURI:(NSString *)namespaceURI qualifiedName:(NSString *)qName
 {
+    OSSimpleHTMLStyle *style = self.styleStack.lastObject;
+
+    if (style.suffixString) {
+        [self appendOutputString:style.suffixString withStyleStack:self.styleStack];
+    }
+
     [self.styleStack removeLastObject];
 }
 
